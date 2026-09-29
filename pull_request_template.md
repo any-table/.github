@@ -1,0 +1,3 @@
+- [ ] I have the right to submit the material I contributed.
+- [ ] I dedicate my original contribution under CC0 1.0 Universal.
+- [ ] Third-party quotations or translations are clearly identified.
