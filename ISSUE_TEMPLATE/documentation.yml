@@ -1,0 +1,82 @@
+name: Documentation issue
+description: Report unclear, inconsistent, outdated, missing, or broken project documentation.
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for problems with README.md, CARD.md, CONTRIBUTING.md,
+        GOVERNANCE.md, NOTICE.md, READING.md, links, version references,
+        or other supporting documentation.
+
+        For a source or attribution problem, use the Source correction form.
+
+        For discussion about the meaning or interpretation of the practice,
+        please use GitHub Discussions.
+
+        Do not use a public GitHub issue to disclose a hard-truth statement,
+        safeguarding report, information about a child or vulnerable person,
+        private correspondence, or other sensitive personal information.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of documentation issue is this?
+      options:
+        - Inconsistent with FOUNDATIONAL.md
+        - Unclear wording
+        - Outdated information
+        - Broken link
+        - Missing documentation
+        - Version mismatch
+        - Formatting or rendering problem
+        - Typo or grammar
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: File or section
+      placeholder: "Example: README.md, GOVERNANCE.md — Custody"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Describe the problem and why it matters.
+      placeholder: "The README says..., but FOUNDATIONAL.md says..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it say or do instead?
+      description: If you know the correction, describe it here.
+      placeholder: "Suggested wording or expected behavior..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add links, screenshots, related issues, or other useful context.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I have not included private or safeguarding-related information.
+          required: true

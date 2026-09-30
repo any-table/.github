@@ -1,1 +1,10 @@
-Do not use GitHub issues to report abuse, disclose a hard-truth statement, identify a child or vulnerable person, or publish private safeguarding information.
+blank_issues_enabled: false
+
+contact_links:
+  - name: Questions and discussion
+    url: https://github.com/any-table/anytable/discussions
+    about: Ask questions, discuss interpretation, or share ideas that are not yet concrete changes.
+
+  - name: Safeguarding and private matters
+    url: https://github.com/any-table/anytable/blob/main/FOUNDATIONAL.md#on-harm-within
+    about: Do not disclose abuse reports, hard-truth statements, information about children or vulnerable people, or other private safeguarding material in a public GitHub issue.

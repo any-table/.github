@@ -1,0 +1,93 @@
+name: Source correction
+description: Report an incorrect, incomplete, or questionable citation, quotation, attribution, translation, or historical claim.
+title: "[Source]: "
+labels:
+  - source
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the source record.
+
+        Use this form for quotations, citations, translations, attributions,
+        historical claims, or references in FOUNDATIONAL.md or READING.md.
+
+        Do not use a public GitHub issue to disclose a hard-truth statement,
+        safeguarding report, information about a child or vulnerable person,
+        private correspondence, or other sensitive personal information.
+
+  - type: input
+    id: location
+    attributes:
+      label: Location in the project
+      description: Where does the material appear?
+      placeholder: "Example: FOUNDATIONAL.md — On doubt, or READING.md — Buddhist texts"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text or claim
+      description: Quote only enough of the current project text to identify the issue.
+      placeholder: "Paste the relevant sentence, quotation, citation, or attribution."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correction-type
+    attributes:
+      label: Type of correction
+      options:
+        - Incorrect quotation
+        - Incorrect attribution
+        - Incorrect citation or passage number
+        - Translation issue
+        - Historical or factual issue
+        - Primary source available
+        - Source description is too strong or imprecise
+        - Other source issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: |
+        Explain why you believe the current wording should be corrected.
+        Prefer primary sources or reliable scholarly editions where available.
+      placeholder: |
+        Current source says...
+        The primary text / edition says...
+        The relevant passage is...
+    validations:
+      required: true
+
+  - type: input
+    id: source-url
+    attributes:
+      label: Source link
+      description: Provide a stable link if one is available.
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction
+      description: Suggest replacement wording or a corrected citation if you have one.
+      placeholder: "Suggested replacement..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same source question.
+          required: true
+        - label: I have not included private or safeguarding-related information.
+          required: true
